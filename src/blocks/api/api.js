@@ -72,6 +72,7 @@ export default class Api {
 
 
   /* Попап сообщения об ошибке */
+  // функция должна ьбыть в классе
 function errorMessage(err) {
     const errorPopupContent = `<div class="popup__content">
     <img src="../images/close.svg" alt="" class="popup__close popup__close_user">

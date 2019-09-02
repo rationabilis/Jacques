@@ -20,6 +20,7 @@ export default class Card {
   
     create() {
       const initialCard = document.createElement('div');
+      // в отдельный метод класса
       initialCard.innerHTML = `<div class="place-card">
         <div class="place-card__image">
           <button class="place-card__delete-icon"></button>
@@ -50,6 +51,9 @@ export default class Card {
     }
   
     popupCall() {
+      // в отдельный метод класса
+      // пример
+      //  const cardPopupContent =  this.templateImage();
       const cardPopupContent =  `<div class="image-and-closebutton">
                                       <div class="popup_image">
                                       <img src="${this.placeLink}" alt="" class="image-size">

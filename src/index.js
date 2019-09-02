@@ -7,6 +7,7 @@ import validateInput from './blocks/validateInput/validateInput';
 import {cardList, newPlaceButton, userButton, userNameHeader, aboutUserParagraph} from './blocks/consts/consts';
 import Api from './blocks/api/api';
 
+// все переменные вынести в отдельный файл в отдельный объект. Настройки все в одно месте.
 const api = new Api({
   baseUrl: 'https://praktikum.tk/cohort1',
   headers: {
@@ -26,8 +27,9 @@ newPlaceButton.addEventListener('click', function() {
 });
 
 /* Ввод данных пользователя */
+// в addEventListener надо добавлять только функцию
 userButton.addEventListener('click', function() {
-
+// вынести в отдельную функцию
   const userPopupContent = `<div class="popup__content">
   <img src="../images/close.svg" alt="" class="popup__close popup__close_user">
   <h3 class="popup__title">Редактировать профиль</h3>
@@ -56,6 +58,7 @@ userButton.addEventListener('click', function() {
 
 
     /* Принимает данные формы */
+    // вынести в отдельную функцию класса
   formUser.addEventListener('submit', function (evt) {
   evt.preventDefault();
     api.editUserData(userName.value, aboutUser.value)
@@ -70,4 +73,18 @@ userButton.addEventListener('click', function() {
   popupUserCloseButton.addEventListener('click', function() {user.close();});
 });
 
-
+/**
+ * Очень хорошо что вы изучаете гит, эти знания пригодятся Вам не только при работе с большими проектами, когда вы наберётесь опыта и попадёте в большую команду
+ * Вы настроили webpack и babel что очень хорошо.
+ * 
+ * Я прокомментировал проблемные участки кода которые мне попались на глаза при просмотре.
+ * Вынесите весь JS код в одну папку для быстроко поиска. Очень неудобно искать 
+ * Не дробите проект на слишком мелкие модули, это очень усложняет изучение и поддержку проекта
+ * 
+ * Старайтесь не вести разработку в одной ветке слишком долго, чтобы у вас не  небыло проблем при реквесте.
+ * 
+ * README.md должно быть рассписано как запустить проект, пошагово, что из себя представляет проект.
+ * Представьте что вы отдедите свой проект своему другу через 5 лет и вы двлжны рассказать что и за чем он, какую несёт цель и так далее
+ * 
+ * Вы проделали большую работу, жду Ваших исправлений. При текущих знаниях я думаю они не займут много времени
+ */
