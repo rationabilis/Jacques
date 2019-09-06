@@ -22,6 +22,9 @@ export default class CardList {
     }
   
     popupCall() {
+      // Тоже в отдельный метод
+      // пример
+      //  const newCardPopupContent =  this.templateImage();
       const newCardPopupContent =  `<div class="popup__content">
           <img src="../images/close.svg" alt="" class="popup__close popup__close_new-place">
           <h3 class="popup__title">Новое место</h3>
