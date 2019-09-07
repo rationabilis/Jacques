@@ -6,6 +6,12 @@ import Popup from './jscripts/popup';
 import validateData from './jscripts/validateData';
 import validateInput from './jscripts/validateInput';
 import {cardList, newPlaceButton, userButton, userNameHeader, aboutUserParagraph} from './jscripts/consts';
+import './images/avatar.jpg';
+import './images/close.svg';
+import './images/like-active.svg';
+import './images/like-inactive.svg';
+import './images/logo.svg';
+import './images/trash-icon.svg';
 import Api from './jscripts/api';
 
 
